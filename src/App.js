@@ -1,6 +1,7 @@
 import './App.css';
 import React from 'react';
 import { data } from './data';
+import { useState } from 'react';
 
 function App () {
   const [person, setPerson] = useState(0);
@@ -28,22 +29,22 @@ function App () {
   }
 
   return (<div>
-      <div className="container">
+      <div>
         <img src={image} alt="photo" width="300px"></img>
       </div>
-      <div className="container">
+      <div>
         <h1>{id} - {name}</h1>
       </div>
-      <div className="container">
+      <div>
         <h2>{description}</h2>
       </div>
-      <div className="container">
+      <div>
         <h2>{age} years old</h2>
       </div>
-      <div className="container">
+      <div>
         <button onClick={previousPerson}>Previous</button>
       </div>
-      <div className="container">
+      <div>
         <button onClick={nextPerson}>Next</button>
       </div>
     </div>
